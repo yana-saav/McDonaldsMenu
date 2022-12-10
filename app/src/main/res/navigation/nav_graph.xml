@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/listFragment">
+
+    <fragment
+        android:id="@+id/listFragment"
+        android:name="com.example.mcdonaldsmenu.list.ListFragment"
+        android:label="fragment_list"
+        tools:layout="@layout/fragment_list" >
+        <action
+            android:id="@+id/action_listFragment_to_aboutDishFragment"
+            app:destination="@id/aboutDishFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/aboutDishFragment"
+        android:name="com.example.mcdonaldsmenu.list.AboutDishFragment"
+        android:label="fragment_about_dish"
+        tools:layout="@layout/fragment_about_dish" >
+        <argument
+            android:name="dish_item"
+            app:argType="com.example.mcdonaldsmenu.list.ArticleModel" />
+    </fragment>
+</navigation>
